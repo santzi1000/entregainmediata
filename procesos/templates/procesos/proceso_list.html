@@ -1,0 +1,17 @@
+{% extends "home/index.html" %}
+{% load static %}
+
+
+{% block after_content %}
+
+{% for proceso in procesos %}
+    <!-- Post preview-->
+    <div class="card-body">
+        <h2>el despacho de origen {{ proceso.juzgado }}</h2>
+        <h3>radicado: {{ proceso.radicado }}</h3>
+    </div>
+    <!-- Divider-->
+    <hr/>
+{% endfor %}
+
+{% endblock %}
